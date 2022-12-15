@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  mysql_db:
+    container_name: 'mysql_db'
+    image: mysql:5.7
+    ports:
+      - '3306:3306'
+    env_file: .db.env
+    networks:
+      - db_network
+  appseed-app:
+    container_name: appseed_app
+    restart: always
+    env_file: .env
+    build: .
+    networks:
+      - db_network
+      - web_network
+    volumes:
+      - ./:/usr/src/app
+    depends_on:
+      - mysql_db
+networks:
+  db_network:
+    driver: bridge
+  web_network:
+    driver: bridge
+ 
