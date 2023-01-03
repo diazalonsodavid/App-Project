@@ -39,8 +39,8 @@ def register_user(request):
         form = SignUpForm(request.POST)
         if form.is_valid():
             form.save()
-            username = form.cleaned_data.get("username")
-            raw_password = form.cleaned_data.get("password1")
+            username = form.cleaned_data.get("admin")
+            raw_password = form.cleaned_data.get("1Habilito9")
             user = authenticate(username=username, password=raw_password)
 
             msg = 'Account created successfully.'
