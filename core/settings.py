@@ -86,7 +86,7 @@ DATABASES = {
     'NAME'    : os.getenv('DB_NAME'     , 'appseed_db'),
     'USER'    : os.getenv('DB_USERNAME' , 'appseed_db_usr'),
     'PASSWORD': os.getenv('DB_PASS'     , '9aFPqugC'),
-    'HOST'    : os.getenv('DB_HOST'     , '172.17.0.1'),
+    'HOST'    : os.getenv('DB_HOST'     , 'mysql'),
     'PORT'    : os.getenv('DB_PORT'     , 3306),
     }
 }
