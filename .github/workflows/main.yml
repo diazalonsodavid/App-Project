@@ -28,3 +28,9 @@ jobs:
         with:
           push: true
           tags: ghcr.io/diazalonsodavid/bootcamp/app-project:0.0.1.7
+      - 
+        name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.TOKEN }}
+          event-type: trigger-cd
