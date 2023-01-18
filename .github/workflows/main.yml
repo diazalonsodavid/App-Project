@@ -27,7 +27,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: ghcr.io/diazalonsodavid/bootcamp/app-project:0.0.1.7
+          tags: ghcr.io/diazalonsodavid/bootcamp/app-project:0.0.1.8
       - 
         name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v2
