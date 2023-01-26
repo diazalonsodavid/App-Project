@@ -27,7 +27,9 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: ghcr.io/diazalonsodavid/bootcamp/app-project:${{ vars.VERSION }}
+          tags: |
+            ghcr.io/diazalonsodavid/bootcamp/app-project:${{ vars.VERSION }}
+            ghcr.io/diazalonsodavid/bootcamp/app-project:latest
       - 
         name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v2
