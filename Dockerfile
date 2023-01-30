@@ -12,13 +12,10 @@ COPY requirements.txt .
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
-
-#COPY . .
 COPY . .
 EXPOSE 5005
 # running migrations (with mysql required to execute migration manually)
 # RUN python manage.py migrate
-
 
 # gunicorn
 CMD ["gunicorn", "--config", "gunicorn-cfg.py", "core.wsgi"]
