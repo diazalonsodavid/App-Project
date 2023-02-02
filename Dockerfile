@@ -7,12 +7,12 @@ ENV PYTHONUNBUFFERED 1
 # Set the default workdir
 WORKDIR /usr/src/app
 
-COPY requirements.txt .
+COPY . .
 # install python dependencies
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+#COPY . .
 EXPOSE 5005
 
 # gunicorn
